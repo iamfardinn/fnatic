@@ -16,8 +16,8 @@ const ShowGames = ({ name, games }) => {
                     {
                         games.map((item) => <SingleGameCard
                             key={item.id}
-                            product={item}
-                            discount
+                            game={item}
+                            rating
                         />)
                     }
                 </div>

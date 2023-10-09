@@ -24,8 +24,8 @@ const Login = () => {
         }
 
         signin(email, password)
-            .then(res => {toast.success('User logged in successfully');
-            navigate('/home') })
+            .then( res => {toast.success('User logged in successfully');
+            navigate('/') })
             .catch(error => {
                 toast.error(error.message)
             })
