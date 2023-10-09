@@ -1,0 +1,61 @@
+{
+    "games": [
+      {
+        "id": 1,
+        "name": "CS-GO Event",
+        "image": "https://i.ibb.co/5Ff1Wr1/34758.jpg",
+        "description": "Competitive first-person shooter. Team tactics, precise shooting, and strategy are crucial for victory.",
+        "price": 59.99,
+        "rating": 9.5
+      },
+      {
+        "id": 2,
+        "name": "Valorant Event",
+        "image": "https://i.ibb.co/XLDzsBj/cropped-1920-1080-1282982.jpg",
+        "description": "Tactical shooter with unique abilities. Team-based matches and strategic gameplay.",
+        "price": 49.99,
+        "rating": 8.8
+      },
+      {
+        "id": 3,
+        "name": "Mystical Realms: Secrets of the Ancients Event",
+        "image": "https://i.ibb.co/hcbp5RJ/video-game-chronicle-runescape-legends-hd-wallpaper-preview.jpg",
+        "description": "Solve ancient mysteries in a mystical world.",
+        "price": 39.99,
+        "rating": 8.2
+      },
+      {
+        "id": 4,
+        "name": "Pirate's Legacy: Treasures of the Abyss Event",
+        "image": "https://i.ibb.co/p4WsS09/wallpaperflare-com-wallpaper-10.jpg",
+        "description": "Search for hidden treasures on the high seas.",
+        "price": 54.99,
+        "rating": 9.0
+      },
+      {
+        "id": 5,
+        "name": "Zombie Outbreak: Survival Chronicles Event",
+        "image": "https://i.ibb.co/bbyhxnL/wallpaperflare-com-wallpaper-11.jpg",
+        "description": "Survive the zombie apocalypse and save humanity.",
+        "price": 44.99,
+        "rating": 7.5
+      },
+      {
+        "id": 6,
+        "name": "Sci-Fi Shooter: Battle for Tomorrow Event",
+        "image": "https://i.ibb.co/s195NWJ/wallpaperflare-com-wallpaper-12.jpg",
+        "description": "Battle futuristic enemies in this action-packed shooter.",
+        "price": 49.99,
+        "rating": 8.6
+      },
+      {
+        "id": 7,
+        "name": "Medieval Hero: Quest for Glory Event",
+        "image": "https://i.ibb.co/BN1GrbG/wallpaperflare-com-wallpaper-14.jpg",
+        "description": "Live the life of a medieval hero in a vast open world.",
+        "price": 59.99,
+        "rating": 9.2
+      }
+    ]
+  }
+  
