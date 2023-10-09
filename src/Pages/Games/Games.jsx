@@ -12,10 +12,10 @@ const Games = () => {
         .then(data => setGames(data));
     },[])
     return (
-        <>
+        <div>
             <ShowGames name={'Popular Games'} games={games}></ShowGames>
            
-        </>
+        </div>
         
     );
     
