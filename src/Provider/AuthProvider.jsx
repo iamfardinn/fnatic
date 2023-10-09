@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from 'react';
-import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GithubAuthProvider, updateProfile } from "firebase/auth";
-import { auth as firebaseAuth } from '../config/firebaseConfig'; // Rename auth here to avoid conflicts
+import { signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut,updateProfile } from "firebase/auth";
+import { auth as firebaseAuth } from '../config/firebaseConfig'; 
 
 export const AuthContext = createContext(null);
 
 const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
+
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState({});
@@ -13,22 +13,19 @@ const AuthProvider = ({ children }) => {
 
     const googleLogin = () => {
         setLoading(true);
-        return signInWithPopup(firebaseAuth, googleProvider); // Use firebaseAuth here
+        return signInWithPopup(firebaseAuth, googleProvider); 
     }
    
-    const githubLogin = () => {
-        setLoading(true);
-        return signInWithPopup(firebaseAuth, githubProvider); // Use firebaseAuth here
-    }
+   
 
     const createUser = (email, password) => {
         setLoading(true);
-        return createUserWithEmailAndPassword(firebaseAuth, email, password); // Use firebaseAuth here
+        return createUserWithEmailAndPassword(firebaseAuth, email, password);
     }
 
     const signin = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword(firebaseAuth, email, password); // Use firebaseAuth here
+        return signInWithEmailAndPassword(firebaseAuth, email, password); 
     }
 
     const handleUpdateProfile = (name, photo) => {
@@ -37,11 +34,9 @@ const AuthProvider = ({ children }) => {
             photoURL: photo
         });
     }
-
     const logOut = () => {
         return signOut(firebaseAuth);
     }
-
     useEffect(() => {
         onAuthStateChanged(firebaseAuth, (user) => {
             setUser(user);
@@ -50,14 +45,7 @@ const AuthProvider = ({ children }) => {
     }, []);
 
     const auth1 = {
-        googleLogin,
-        createUser,
-        signin,
-        logOut,
-        user,
-        loading,
-        githubLogin,
-        handleUpdateProfile
+        googleLogin,createUser,signin,logOut, user, loading, handleUpdateProfile
     }
     
     return (

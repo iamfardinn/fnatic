@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { toast } from 'react-hot-toast';
 import useAuth from '../../hooks/useAuth';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
    
@@ -19,7 +20,7 @@ const Login = () => {
 
     
          if (password.length < 7) {
-            toast.error('Password must be at least 6 characters');
+            toast.error('Password must be at least 7 characters');
             return;
         }
 
@@ -27,7 +28,7 @@ const Login = () => {
             .then( res => {toast.success('User logged in successfully');
             navigate('/') })
             .catch(error => {
-                toast.error(error.message)
+                toast.error("Failed")
             })
     }
 
@@ -43,7 +44,7 @@ const Login = () => {
         <div className="mx-0 min-h-screen justify-center sm:flex sm:flex-row">
           <div className="z-10 flex flex-col self-center p-10 sm:max-w-5xl xl:max-w-2xl">
             <div className="hidden flex-col self-start text-white lg:flex">
-              <img src="https://ibb.co/YR5qYVr" className="mb-3" alt="Your Image" />
+              <img src="https://ibb.co/YR5qYVr" className="mb-3"/>
               <h1 className="mb-3 text-5xl font-bold">Welcome Back!</h1>
               <p className="pr-3">
               Fnatic: A top esports organization, known for elite gaming talent, fierce competition, and global fan engagement in esports championships.
@@ -85,7 +86,7 @@ const Login = () => {
                     <label htmlFor="remember_me" className="ml-2 block text-sm text-white"> Remember me </label>
                   </div>
                   <div className="text-sm">
-                    <a href="#" className="text-white hover:text-green-500"> New Here? <Link to="/register" className="label-text-alt link link-hover">Create an account</Link> </a>
+                    <a href="#" className="text-white hover:text-green-500 ml-7"> New Here? <Link to="/register" className="label-text-alt link link-hover">Create an account</Link> </a>
                   </div>
                 </div>
                 <div>
@@ -96,11 +97,9 @@ const Login = () => {
                     Login
                   </button>
                 </div>
-                
+                <SocialLogin></SocialLogin>
               </form>
-              <div className="pt-5 text-center text-xs text-white">
-                <span>Copyright © 2023-2024</span>
-              </div>
+             
             </div>
           </div>
         </div>

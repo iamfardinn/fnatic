@@ -56,7 +56,13 @@ const router = createBrowserRouter([
       {
         path:'/cloudgaming',
         element:<CloudGaming></CloudGaming>
-      }
+      },
+      {
+        path: 'product/:id',
+        element: <PrivateRoute>
+          <GameDetail />
+        </PrivateRoute>
+      },
     ],
   },
 ]);
