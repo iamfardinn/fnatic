@@ -15,6 +15,7 @@ import Login from './Pages/Login/Login.jsx';
 import Register from './Pages/Login/Register.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Root from "./Root";
+import CloudGaming from "./Pages/CloudGaming/CloudGaming";
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>,
       },
+      {
+        path:'/cloudgaming',
+        element:<CloudGaming></CloudGaming>
+      }
     ],
   },
 ]);

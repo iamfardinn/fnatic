@@ -4,19 +4,17 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Menus =() =>{
-  const links =['games','about','contact','blog'];
+  const links =['games','about','cloudgaming','blog'];
   return(
     <>
     {
     links.map(link =><li key ={link}>
       <Link to={`/${link}`} className="btn btn-sm  btn-ghost">{link}</Link>
-
     </li>)
 }
     </>
   )
 }
-
 const NavBar = () => {
     const{user,logOut} =useAuth();
     return (
@@ -31,16 +29,13 @@ const NavBar = () => {
                           <Menus />
                       </ul>
                   </div>
-                  <Link to='/' className="btn btn-ghost font-bold normal-case text-3xl">GLASSES</Link>
+                  <Link to='/' className="btn btn-ghost font-bold normal-case text-3xl text-red-500">fnatic</Link>
               </div>
               <div className="navbar-center hidden lg:flex">
                   <ul className="menu menu-horizontal px-1">
                       <Menus />
                   </ul>
               </div>
-
-
-              {/* avatar part  */}
               <div className="navbar-end">
                   {
                       user?.email ? <div className="dropdown dropdown-end">
@@ -64,7 +59,7 @@ const NavBar = () => {
                       </div>
                           :
                           <Link to='/login'>
-                              <button className="btn btn-sm  btn-ghost">Login</button>
+                              <button type="button" className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Play Now</button>
                           </Link>
                   }
               </div>

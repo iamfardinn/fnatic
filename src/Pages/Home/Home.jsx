@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Slider from "./Slider";
 import ShowGames from "../../Components/ShowGames";
 import About from "../About/About";
+import CloudGaming from "../CloudGaming/CloudGaming";
 
 
 const Home = () => {
@@ -20,9 +21,10 @@ useEffect(()=>{
     return (
        <>
        <Slider></Slider>
-<ShowGames name={"Most Played"} games={games.slice(3,6)}/>
+<ShowGames name={"Most Hyped Event"} games={games.slice(1,6)}/>
 <ShowGames name={"Hits"} games={games.slice(0,3)}/>
 <About></About>
+<CloudGaming></CloudGaming>
 
 
  

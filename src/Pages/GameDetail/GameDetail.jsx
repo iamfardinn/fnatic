@@ -11,7 +11,7 @@ const GameDetail = () => {
         fetch(`https://my-json-server.typicode.com/iamfardinn/json/games/${id}`)
         .then(res => res.json())
         .then(data=> setGame(data));
-    },[])
+    },[id])
     return (
         <>
             
@@ -25,7 +25,7 @@ const GameDetail = () => {
                     <div className=" bg-black h-auto md:h-[80%] md:-ml-24  p-4">
                         <h1 className="text-5xl font-bold mb-8">{game.name}</h1>
                         <p>{game.description}</p>
-                        <p>One of the Best  </p>
+                        <p>One of the Best</p>
 
                         <h1 className="text-4xl font-bold my-4">${game.price}</h1>
                         <br />
@@ -34,7 +34,7 @@ const GameDetail = () => {
                     </div>
                 </div>
             </div>
-            <img src="https://i.ibb.co/YR98kwp/wallpaperflare-com-wallpaper-14.jpg"></img>
+           
         </>
     );
 };
